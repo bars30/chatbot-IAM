@@ -6,7 +6,7 @@ import { uiTexts as deTexts } from "./lang/ui-texts.de.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-
+const footerBtn = document.querySelectorAll(".footer-btn-cont button");
   const langButtons = document.querySelectorAll('.lang-option');
 
   langButtons.forEach(button => {
@@ -89,7 +89,10 @@ function updateUIText() {
 
   document.querySelector("footer p").textContent = texts.footer.copyright;
 
-  const footerBtns = document.querySelectorAll(".footer-btn-cont a");
+  const footerBtns = document.querySelectorAll(".footer-btn-cont button");
+  console.log("154");
+  console.log(footerBtns);
+  
   
   if (footerBtns.length >= 2) {
     footerBtns[0].textContent = texts.footer.imprint;
@@ -257,7 +260,10 @@ function getBotReply(prompt) {
       const selectedPrompt = btn.textContent;
 
       promptButtons.forEach(b => b.disabled = true);
+      footerBtn[0].disabled = true;
+    footerBtn[1].disabled = true;
       promptsSection.classList.add("fade-out");
+console.log("disableeeeeeeeeeed", footerBtn, 1);
 
       setTimeout(() => {
         promptsSection.style.display = "none";
@@ -318,11 +324,15 @@ function getBotReply(prompt) {
 questionsBtn.disabled = true;
 langButtons.forEach(b => b.disabled = true);
 sendBtn.disabled = true;
+footerBtn[0].disabled = true;
+    footerBtn[1].disabled = true;
 
 typeTextHTML(botP, getBotReply(selectedPrompt), 20, () => {
   questionsBtn.disabled = false;
   langButtons.forEach(b => b.disabled = !true);
 sendBtn.disabled = !true;
+footerBtn[0].disabled = !true;
+    footerBtn[1].disabled = !true;
   saveChatHistory();
 });
       }, 400);

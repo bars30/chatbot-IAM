@@ -139,7 +139,7 @@ background: none;
 }
 .logo-wrapper {
  display: flex;
- gap: 8px;
+ gap: 16px;
  justify-content: start;
  align-items: center;
 }
@@ -151,7 +151,6 @@ background: none;
  font-weight: 500;
  font-size: var(--18px);
  color: var(--text-dark);
-     text-align: center;
 }
 .logo-header-subtitle {
  color: var(--text-subtitle);
@@ -160,7 +159,7 @@ background: none;
 .logo-header {
     display: flex;
     flex-direction: column;
-    
+      margin-top: -4px;
 }
 .chat {
   flex: 1;
@@ -279,6 +278,7 @@ h3 {
 .btn-cont .chatbox-footer-btn{
       display: flex;
     align-items: center;
+    max-height: 32px;
 }
 .chatbox-footer-btn-questions {
  background-color: var(--brand-blue);
@@ -383,7 +383,7 @@ ul, ol {
     padding: 6px 0 12px 30px;
 }
 li {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 img.team-member-img {
     width: 29%;
@@ -392,7 +392,8 @@ img.team-member-img {
         margin-right: 2%;
 }
 ul ul {
-  padding-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 16px;
 }
 ul ~ img, ol ~ img, ul ~ h4, ol ~ h4  {
   margin-top: 0 !important;
@@ -402,14 +403,12 @@ button.chatbox-footer-btn.clear-btn {
     color: black;
 }
 article.team-member {
-    margin-bottom: 15px;
+    margin-bottom: 24px;
     display: flex;
     justify-content: start;
 }
 .article-cont {
     width: 69%;
-    background-color: var(--button-shadow);
-    padding: 12px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -857,23 +856,18 @@ input:checked + .slider .sun-icon {
 
 }
 footer {
-    background-color: var(--button-shadow);
+    background-color: var(--brand-blue);
     padding: 12px 2.5%;
     display: flex;
     justify-content: space-between;
 }
 footer p {
   width: 70%;
+  color: white;
 }
 .footer-btn {
-    background-color: transparent;
-    border: none;
+    height: fit-content;
     margin-left: 12px;
-    cursor: pointer;
-    display: flex;
-    align-items: end;
-    color: white;
-        font-size: 14px;
 }
 .footer-btn p {
   text-decoration: underline;
